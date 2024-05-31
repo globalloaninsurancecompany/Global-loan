@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan Application Form</h1>
+      <form id="personal-info-form">
+        <h2>Personal Information</h2>
+        <div class="input-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="input-group">
+          <label for="fullAddress">Full Address</label>
+          <input type="text" id="fullAddress" name="fullAddress" required />
+        </div>
+
+        <div class="input-group">
+          <label for="mobileNumber">Cell/Mobile Number</label>
+          <input type="tel" id="mobileNumber" name="mobileNumber" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="gender">Male or Female</label>
+          <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="maritalStatus">Marital Status</label>
+          <input type="text" id="maritalStatus" name="maritalStatus" required />
+        </div>
+
+        <div class="input-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+
+        <div class="input-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" name="occupation" required />
+        </div>
+
+        <div class="input-group">
+          <label for="income">Worth of Income</label>
+          <input type="number" id="income" name="income" required />
+        </div>
+
+        <div class="input-group">
+          <label for="photo">Photo of You</label>
+          <input type="file" id="photo" name="photo" required />
+        </div>
+
+        <button type="button" onclick="showBankForm()">Next</button>
+      </form>
+
+      <form id="bank-info-form" style="display: none">
+        <h2>Bank Information</h2>
+        <div class="input-group">
+          <label for="accountHolder">Account Holder Name</label>
+          <input type="text" id="accountHolder" name="accountHolder" required />
+        </div>
+
+        <div class="input-group">
+          <label for="bankName">Name of Bank</label>
+          <input type="text" id="bankName" name="bankName" required />
+        </div>
+
+        <div class="input-group">
+          <label for="bankAddress">Bank Address</label>
+          <input type="text" id="bankAddress" name="bankAddress" required />
+        </div>
+
+        <div class="input-group">
+          <label for="accountNumber">Bank Account Number</label>
+          <input type="text" id="accountNumber" name="accountNumber" required />
+        </div>
+
+        <div class="input-group">
+          <label for="personalPhoneNumber">Personal Telephone Number</label>
+          <input
+            type="tel"
+            id="personalPhoneNumber"
+            name="personalPhoneNumber"
+            required
+          />
+        </div>
+
+        <button type="submit">Submit</button>
+        <button
+          type="button"
+          onclick="showPersonalForm()"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <span>
+            <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+            <svg
+              height="30px"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="30px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <polygon
+                points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "
+              />
+            </svg>
+          </span>
+          <span>Back</span>
+        </button>
+      </form>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Application Submitted</h2>
+        <p id="modal-message"></p>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
